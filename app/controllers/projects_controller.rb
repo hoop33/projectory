@@ -49,7 +49,7 @@ private
   def do_weeks
     @weeks = Array.new
     date = DateTime.now.beginning_of_week
-    6.times do
+    10.times do
       week = Week.where("start = ?", date.to_date).first
       puts week
       if week.nil?

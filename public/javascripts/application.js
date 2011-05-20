@@ -34,5 +34,4 @@ $('document').ready(function() {
       requested_action: 'delete'
     });
   });
-
 });

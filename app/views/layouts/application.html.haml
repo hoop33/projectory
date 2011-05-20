@@ -3,10 +3,10 @@
   %head
     %title Projectory
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'print.css', :media => 'print'
+    //= stylesheet_link_tag 'print.css', :media => 'print'
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'application.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'application.css', :media => 'screen, projection, print'
     = stylesheet_link_tag 'farbtastic.css', :media => 'screen, projection'
     = javascript_include_tag 'jquery.min.js', 'application.js', 'farbtastic.js', 'jquery-ui-1.8.13.custom.min.js', :cache => 'all_1'
     = csrf_meta_tag
