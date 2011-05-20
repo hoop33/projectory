@@ -82,6 +82,7 @@ body.bp {
           font-size: 1.5em;
           font-weight: bold;
           padding: 5px 10px 5px 10px;
+          color: $background-color;
           @include border-radius(10px, 10px);
 
           a {
@@ -116,7 +117,7 @@ body.bp {
           background-color: $color1;
           font-size: 1.5em;
           font-weight: bold;
-          padding: 5px 10px 5px 10px;
+          padding: 5px 35px 5px 35px;
           @include border-radius(10px, 10px);
           margin: 0 0 5px 0;
           text-align: center;
@@ -134,6 +135,10 @@ body.bp {
         .project {
           font-size: 1.0em;
           display: inline;
+        }
+
+        .delete {
+          background: url(../images/delete.png) no-repeat 5px 3px;
         }
       }
     }

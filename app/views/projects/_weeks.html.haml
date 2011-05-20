@@ -5,5 +5,5 @@
     %li.week{ :id => week.id }= "#{week.start.strftime('%m/%d')} - #{(week.start + 5).strftime('%m/%d')}"
     %ul.projects
       - week.projects.each do |project|
-        %li.project{ :style => "background-color: #{project.color}"}= project.title
+        %li.project{ :id => project.id, :week_id => week.id, :style => "background-color: #{project.color}"}= project.title
        

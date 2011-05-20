@@ -11,10 +11,28 @@ $('document').ready(function() {
     accept: '.title',
     hoverClass: 'active',
     drop: function(event, props) {
-      $('#wrapper').load('projects/change', {
-        drag_id: $(props.draggable).attr('id'),
-        drop_id: $(this).attr("id")
+      $('#wrapper').load('/projects/change', {
+        project_id: $(props.draggable).attr('id'),
+        week_id: $(this).attr('id'),
+        redirect_path: window.location.pathname,
+        requested_action: 'add'
       });
     }
   });
+
+  $('.project').hover(function() {
+    $(this).addClass('delete');
+  }, function() {
+    $(this).removeClass('delete');
+  });
+
+  $('.project').click(function(event, props) {
+    $('#wrapper').load('/projects/change', {
+      project_id: $(this).attr('id'),
+      week_id: $(this).attr('week_id'),
+      redirect_path: window.location.pathname,
+      requested_action: 'delete'
+    });
+  });
+
 });

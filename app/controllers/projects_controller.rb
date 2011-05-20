@@ -20,18 +20,28 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params[:project])
     if @project.save
-      redirect_to(:projects, :notice => "Project #{@project.title} created")
+      redirect_to projects_path
     else
       render :action => 'new'
     end
   end
 
-  def change
-    @project = Project.find(params[:drag_id])
-    @week = Week.find(params[:drop_id])
-    @project.weeks << @week
-
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
     redirect_to projects_path
+  end
+
+  def change
+    @project = Project.find(params[:project_id])
+    @week = Week.find(params[:week_id])
+    if (params[:requested_action] == 'delete')
+      @project.weeks.delete @week
+    else
+      @project.weeks << @week
+    end
+
+    redirect_to params[:redirect_path]
   end
 
 private

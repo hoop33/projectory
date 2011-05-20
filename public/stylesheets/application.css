@@ -184,6 +184,7 @@ body.bp #wrapper #projects #container .title {
   font-size: 1.5em;
   font-weight: bold;
   padding: 5px 10px 5px 10px;
+  color: white;
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px / 10px;
   -o-border-radius: 10px / 10px;
@@ -191,17 +192,17 @@ body.bp #wrapper #projects #container .title {
   -khtml-border-radius: 10px / 10px;
   border-radius: 10px / 10px;
 }
-/* line 87, ../../app/stylesheets/application.scss */
+/* line 88, ../../app/stylesheets/application.scss */
 body.bp #wrapper #projects #container .title a {
   text-decoration: none;
   color: white;
 }
-/* line 93, ../../app/stylesheets/application.scss */
+/* line 94, ../../app/stylesheets/application.scss */
 body.bp #wrapper #projects #container .description {
   color: #555555;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-/* line 100, ../../app/stylesheets/application.scss */
+/* line 101, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks {
   display: inline;
   float: left;
@@ -214,23 +215,23 @@ body.bp #wrapper #weeks {
 * html body.bp #wrapper #weeks {
   overflow-x: hidden;
 }
-/* line 105, ../../app/stylesheets/application.scss */
+/* line 106, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container {
   padding: 10px;
 }
-/* line 108, ../../app/stylesheets/application.scss */
+/* line 109, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-/* line 114, ../../app/stylesheets/application.scss */
+/* line 115, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container li {
   color: white;
   background-color: #995f1c;
   font-size: 1.5em;
   font-weight: bold;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 35px 5px 35px;
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px / 10px;
   -o-border-radius: 10px / 10px;
@@ -240,21 +241,25 @@ body.bp #wrapper #weeks #container li {
   margin: 0 0 5px 0;
   text-align: center;
 }
-/* line 125, ../../app/stylesheets/application.scss */
+/* line 126, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container .active {
   background-color: #911a27;
 }
-/* line 129, ../../app/stylesheets/application.scss */
+/* line 130, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container .projects {
   margin: 10px 0 10px 20px;
   line-height: 35px;
 }
-/* line 134, ../../app/stylesheets/application.scss */
+/* line 135, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container .project {
   font-size: 1.0em;
   display: inline;
 }
-/* line 141, ../../app/stylesheets/application.scss */
+/* line 140, ../../app/stylesheets/application.scss */
+body.bp #wrapper #weeks #container .delete {
+  background: url(../images/delete.png) no-repeat 5px 3px;
+}
+/* line 146, ../../app/stylesheets/application.scss */
 body.bp #wrapper #footer {
   display: inline;
   float: left;
@@ -272,7 +277,7 @@ body.bp #wrapper #footer {
 * html body.bp #wrapper #footer {
   overflow-x: hidden;
 }
-/* line 146, ../../app/stylesheets/application.scss */
+/* line 151, ../../app/stylesheets/application.scss */
 body.bp #wrapper #footer p {
   color: white;
   margin: 10px;

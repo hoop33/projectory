@@ -1,6 +1,15 @@
 - content_for :projects do
-  %h2= @project.title
+  %h2= Project
+  .project
+    .title{ :id => @project.id, :style => "background-color: #{@project.color}" }
+      = @project.title
+    .description
+      = @project.description
+    .target_date
+      Target Date:
+      = @project.target_date
 
-  .description= @project.description
-
-  = link_to 'Edit', edit_project_path(@project), :class => 'button'
+    = link_to 'Edit', edit_project_path(@project), :class => 'button'
+    /= link_to 'Delete', delete_project_path(@project), :class => 'button'
+    %br
+    = link_to 'Projects', projects_path
