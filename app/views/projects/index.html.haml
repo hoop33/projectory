@@ -3,7 +3,7 @@
 
   - @projects.each do |project|
     .project
-      .title{ :style => "background-color: #{project.color}" }
+      .title{ :id => project.id, :style => "background-color: #{project.color}" }
         = link_to project.title, project
       .description
         = project.description

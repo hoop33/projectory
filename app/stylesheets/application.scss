@@ -108,15 +108,32 @@ body.bp {
         ul {
           list-style: none;
           padding-left: 0;
+          margin: 0;
         }
 
         li {
           color: $background-color;
           background-color: $color1;
+          font-size: 1.5em;
           font-weight: bold;
-          @include border-radius(5px, 5px);
+          padding: 5px 10px 5px 10px;
+          @include border-radius(10px, 10px);
           margin: 0 0 5px 0;
           text-align: center;
+        }
+
+        .active {
+          background-color: $color2;
+        }
+
+        .projects {
+          margin: 10px 0 10px 20px;
+          line-height: 35px;
+        }
+
+        .project {
+          font-size: 1.0em;
+          display: inline;
         }
       }
     }

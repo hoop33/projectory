@@ -8,19 +8,19 @@
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = stylesheet_link_tag 'application.css', :media => 'screen, projection'
     = stylesheet_link_tag 'farbtastic.css', :media => 'screen, projection'
-    = javascript_include_tag 'jquery.min.js', 'application.js', 'farbtastic.js', :cache => 'all_1'
+    = javascript_include_tag 'jquery.min.js', 'application.js', 'farbtastic.js', 'jquery-ui-1.8.13.custom.min.js', :cache => 'all_1'
     = csrf_meta_tag
 
   %body.bp
     #wrapper
       #header
-        %h1 Projectory
+        %h1= "Projectory: #{DateTime.now.strftime('%m/%d/%y')}"
       #projects
         #container
           = yield :projects
       #weeks
         #container
-          //= render 'weeks'
+          = render 'weeks'
           = yield :weeks
       #footer
         %p
