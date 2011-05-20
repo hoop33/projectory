@@ -1,0 +1,6 @@
+- content_for :projects do
+  %h2= @project.title
+
+  .description= @project.description
+
+  = link_to 'Edit', edit_project_path(@project), :class => 'button'

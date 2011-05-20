@@ -1,0 +1,9 @@
+%h2 Weeks
+
+%ul
+  - @weeks.each do |week|
+    %li= "#{week.start.strftime('%m/%d')} - #{(week.start + 5).strftime('%m/%d')}"
+    %p
+      - week.projects.each do |project|
+        = project.title
+       

@@ -1,0 +1,27 @@
+!!! 5
+%html
+  %head
+    %title Projectory
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'application.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'farbtastic.css', :media => 'screen, projection'
+    = javascript_include_tag 'jquery.min.js', 'application.js', 'farbtastic.js', :cache => 'all_1'
+    = csrf_meta_tag
+
+  %body.bp
+    #wrapper
+      #header
+        %h1 Projectory
+      #projects
+        #container
+          = yield :projects
+      #weeks
+        #container
+          //= render 'weeks'
+          = yield :weeks
+      #footer
+        %p
+          Projectory

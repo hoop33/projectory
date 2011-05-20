@@ -1,0 +1,136 @@
+@import "blueprint";
+@import "compass/css3/border-radius";
+@import "fancy-buttons";
+
+// Colors
+$main-color: #17806d;
+$color1: #995f1c;
+$color2: #911a27;
+$color-unobtrusive: #555;
+$background-color: white;
+$shadow-color: #777;
+
+// Sizes
+$main-font-size: 16px;
+
+@mixin shadow {
+  text-shadow: 2px 2px 2px $shadow-color;
+}
+
+body.bp {
+  font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+  background-color: $background-color;
+  font-size: $main-font-size;
+
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    @include shadow;
+  }
+
+  h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    color: $color1;
+    @include shadow;
+  }
+
+  label {
+    @include shadow;
+  }
+
+  input, textarea {
+    @include border-radius(10px, 10px);
+    font-size: 1.2em;
+  }
+  
+  .button {
+    @include fancy-button($color2);
+    color: $background-color;
+  }
+
+  #wrapper {
+    @include container;
+
+    #header {
+      @include column(24);
+      @include border-radius(10px, 10px);
+      background-color: $main-color;
+      margin-top: 10px;
+
+      h1 {
+        color: $background-color;
+        margin: 10px;
+      }
+    }
+
+    #projects {
+      @include column(12);
+      @include prepend-top(10px);
+      @include append-bottom(10px);
+
+      #container {
+        padding: 10px;
+
+        .project {
+          margin-bottom: 15px;
+        }
+
+        .title {
+          font-size: 1.5em;
+          font-weight: bold;
+          padding: 5px 10px 5px 10px;
+          @include border-radius(10px, 10px);
+
+          a {
+            text-decoration: none;
+            color: $background-color;
+          }
+        }
+
+        .description {
+          color: $color-unobtrusive;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+      }
+    }
+
+    #weeks {
+      @include column(12, true);
+      @include prepend-top(10px);
+      @include append-bottom(10px);
+
+      #container {
+        padding: 10px;
+
+        ul {
+          list-style: none;
+          padding-left: 0;
+        }
+
+        li {
+          color: $background-color;
+          background-color: $color1;
+          font-weight: bold;
+          @include border-radius(5px, 5px);
+          margin: 0 0 5px 0;
+          text-align: center;
+        }
+      }
+    }
+
+    #footer {
+      @include column(24);
+      @include border-radius(10px, 10px);
+      background-color: $main-color;
+
+      p {
+        color: $background-color;
+        margin: 10px;
+      }
+    }
+  }
+}
+

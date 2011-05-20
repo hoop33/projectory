@@ -1,0 +1,11 @@
+- content_for :projects do
+  %h2 Projects
+
+  - @projects.each do |project|
+    .project
+      .title{ :style => "background-color: #{project.color}" }
+        = link_to project.title, project
+      .description
+        = project.description
+
+  = link_to 'New Project', new_project_path, :class => 'button'
