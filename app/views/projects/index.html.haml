@@ -2,7 +2,8 @@
   %h2 Projects
 
   - @projects.each do |project|
-    .project{ :class => project.weeks.length == 0 ? 'no_weeks' : '' }
+    - num_weeks = project.num_weeks_scheduled(@weeks)
+    .project{ :class => num_weeks == 0 ? 'no_weeks' : '' }
       .title{ :id => project.id, :style => "background-color: #{project.color}" }
         = link_to project.title, edit_project_path(project)
         .more_info
@@ -10,7 +11,7 @@
           = project.target_date
           %br
           Weeks:
-          = project.weeks.length
+          = num_weeks
       .description
         = project.description
 
