@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110519213904) do
+ActiveRecord::Schema.define(:version => 20110523202053) do
 
   create_table "project_weeks", :force => true do |t|
     t.integer  "project_id", :null => false
@@ -20,12 +20,13 @@ ActiveRecord::Schema.define(:version => 20110519213904) do
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "title",       :null => false
+    t.string   "title",            :null => false
     t.string   "description"
-    t.string   "color",       :null => false
+    t.string   "color",            :null => false
     t.date     "target_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "hide_target_date"
   end
 
   create_table "weeks", :force => true do |t|

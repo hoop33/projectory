@@ -7,9 +7,10 @@
       .title{ :id => project.id, :style => "background-color: #{project.color}" }
         = link_to project.title, edit_project_path(project)
         .more_info
-          Target:
-          = project.target_date.strftime('%m/%y')
-          %br
+          - if !project.hide_target_date
+            Target:
+            = project.target_date.strftime('%m/%y')
+            %br
           Weeks:
           = num_weeks
       .description
