@@ -2,7 +2,7 @@
   %h2 Projects
 
   - @projects.each do |project|
-    .project
+    .project{ :class => project.weeks.length == 0 ? 'no_weeks' : '' }
       .title{ :id => project.id, :style => "background-color: #{project.color}" }
         = link_to project.title, edit_project_path(project)
         .more_info

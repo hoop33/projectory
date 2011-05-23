@@ -78,6 +78,11 @@ body.bp {
           margin-bottom: 15px;
         }
 
+        .no_weeks {
+          border: 1px dashed $color-unobtrusive;
+          @include border-radius(10px, 10px);
+        }
+
         .title {
           font-size: 1.5em;
           font-weight: bold;
