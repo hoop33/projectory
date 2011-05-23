@@ -89,6 +89,12 @@ body.bp {
             text-decoration: none;
             color: $background-color;
           }
+
+          .more_info {
+            float: right;
+            font-size: 0.5em;
+            text-align: right;
+          }
         }
 
         .description {

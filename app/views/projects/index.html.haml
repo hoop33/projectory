@@ -4,7 +4,13 @@
   - @projects.each do |project|
     .project
       .title{ :id => project.id, :style => "background-color: #{project.color}" }
-        = link_to project.title, project
+        = link_to project.title, edit_project_path(project)
+        .more_info
+          Target:
+          = project.target_date
+          %br
+          Weeks:
+          = project.weeks.length
       .description
         = project.description
 
