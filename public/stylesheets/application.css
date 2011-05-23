@@ -270,12 +270,13 @@ body.bp #wrapper #weeks #container .projects {
 body.bp #wrapper #weeks #container .project {
   font-size: 1.0em;
   display: inline;
+  white-space: nowrap;
 }
-/* line 151, ../../app/stylesheets/application.scss */
+/* line 152, ../../app/stylesheets/application.scss */
 body.bp #wrapper #weeks #container .delete {
   background: url(../images/delete.png) no-repeat 5px 3px;
 }
-/* line 157, ../../app/stylesheets/application.scss */
+/* line 158, ../../app/stylesheets/application.scss */
 body.bp #wrapper #footer {
   display: inline;
   float: left;
@@ -293,7 +294,7 @@ body.bp #wrapper #footer {
 * html body.bp #wrapper #footer {
   overflow-x: hidden;
 }
-/* line 162, ../../app/stylesheets/application.scss */
+/* line 163, ../../app/stylesheets/application.scss */
 body.bp #wrapper #footer p {
   color: white;
   margin: 10px;
