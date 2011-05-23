@@ -8,7 +8,7 @@
         = link_to project.title, edit_project_path(project)
         .more_info
           Target:
-          = project.target_date
+          = project.target_date.strftime('%m/%y')
           %br
           Weeks:
           = num_weeks

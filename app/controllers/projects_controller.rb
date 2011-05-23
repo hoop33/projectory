@@ -2,7 +2,7 @@ require 'active_support'
 
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.all.sort_by(&:target_date)
     do_weeks
   end
 
